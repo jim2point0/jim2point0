@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width" name="viewport">
+    <title>DSR Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://use.typekit.net/gts3imk.js"></script>
+  <script>try { Typekit.load(); } catch (e) { }</script>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>DSR Calculator</h1>
+      <div class="instructions">
+        <p>This form allows you to completely configure your DSR options.</p>
+        <p>Enter your preference for smoothness (how soft the image will be after downsampling) or leave it at the default.</p>
+        <p>Enter your native resolution and all of the desired resolutions you want in DSR. You can add up to 10, but DSR will not accept more than that. You do not need the custom DSR tool to get 10 resolutions if you use this method.</p>
+        <p>When you're done, press the "Get Hex" button and the data you need for the registry will be generated. Copy that and replace the "SmoothScalingData" in an exported registry file and then import.</p>
+        <p><a href="http://www.deadendthrills.com/forum/discussion/504/how-to-custom-aspect-ratios-and-resolutions-via-dsr-nvidia-only/p1">A more detailed guide can be found here</a></p>
+      </div>
+    </header>
+    <main>
+      <form id="the-form" name="the-form">
+        <h2>Configuration</h2>
+        <div class="config">
+          <div class="form-row">
+            <div class="form-field">
+              <label for="native-x" >Native <strong>X</strong></label> <input id="native-x" type="text" data-bind="value: nativeX">
+            </div>
+            <div class="form-field">
+              <label for="native-y" >Native <strong>Y</strong></label> <input id="native-y" type="text" data-bind="value: nativeY">
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Smoothness % (default 33)</label> <input name="nativeX" type="text" data-bind="value: smoothness">
+          </div>
+        </div>
+
+        <h2>Desired Resolutions</h2>
+        <div class="desired-res">
+          <div data-bind="foreach: resolutions">
+            <div class="form-row">
+              <div class="form-field">
+                <label data-bind="attr: {for: 'desired-x' + $index()}">X:</label><input class="desired" type="text" data-bind="value: desiredX, attr: {id: 'desired-x' + $index()}">
+              </div>
+              <div class="form-field">
+                <label data-bind="attr: {for: 'desired-y' + $index()}">Y:</label><input class="desired" type="text" data-bind="value: desiredY, attr: {id: 'desired-y' + $index()}">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-field button-row">
+          <button type="button" data-bind="click:generateHex">Get Hex</button>
+        </div>
+        <div class="registry-data">
+          <p>Data for registry file:</p>
+          <code></code>
+        </div>
+      </form>             
+    </main>
+  </div>
+  <script type='text/javascript' src='js/lib/jquery-3.1.1.min.js'></script>
+  <script type='text/javascript' src='js/lib/knockout-3.4.0.js'></script>
+  <script src="js/dsrConvert.js"></script>
+</body>
+</html>
