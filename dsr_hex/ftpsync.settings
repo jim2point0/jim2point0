@@ -1,0 +1,10 @@
+{
+    "primary": {
+        "host": "adaptoid.dreamhost.com",
+        "username": "jim2point0",
+        "password": "Lava4you",
+        "path": "/jim2point0.com/tools/dsr_hex/",
+
+        "upload_on_save": false
+    }
+}

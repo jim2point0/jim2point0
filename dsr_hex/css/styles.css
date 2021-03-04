@@ -1,0 +1,298 @@
+/* Style Reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	font-family: "proxima-nova","Helvetica Neue","Helvetica","Arial",sans-serif;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Page styles */
+
+body {
+	color: #082f4a;
+	background-color: #efefef;
+}
+
+.wrapper {
+	width: 880px;
+	margin: 0 auto;
+	padding-bottom: 50px;
+}
+
+h1 {
+	background-color: #0e79c4;
+	color: #fff;
+	display: block;
+	font-size: 38px;
+	font-weight: 300;
+	height: 38px;
+	line-height: 38px;
+	padding: 25px 40px;
+}
+
+h2 {
+	margin: 20px 0 5px 0;
+}
+
+.instructions,
+.registry-data {
+	display: inline-block;
+	padding: 30px;
+}
+
+.instructions p {  
+	font-size: 16px; 
+	margin-top: 10px;
+	line-height: 18px;
+	word-wrap: break-word;
+	text-align: left;
+}
+
+.instructions p:first-child {  
+	margin-top: 0;
+}
+
+.instructions a {
+	color: #0e79c4;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.instructions a:hover {
+	text-decoration: underline;
+}
+
+button {
+	box-sizing: border-box;
+    border: 0;
+    border-radius: 3px;
+    color: #333;
+    background-color: #fad14f;
+    cursor: pointer;
+    font-size: 20px;
+    height: 50px;
+    margin: 0;
+    text-align: center;
+    width: auto;
+    display: inline-block;
+    line-height: 50px;
+    padding: 0 20px;
+}
+
+button:hover {
+	border: 2px solid #444;
+	padding: 20px 38px;
+}
+
+.config label {
+    box-sizing: border-box;
+    color: #075278;
+    display: block;
+    font-size: 12px;
+    font-weight: 300;
+    height: 12px;
+    left: 0px;
+    line-height: 12px;
+    margin-bottom: 3px;
+    padding-left: 15px;
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    z-index: 5;
+    cursor: text;
+}
+
+.desired-res label {
+	z-index: 5;
+    cursor: text;
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 30px;
+    height: 38px;
+    font-size: 16px;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 38px;
+    text-align: center;
+    color: #075278;
+    /*background-color: #fdf6e3;*/
+}
+
+input {
+	background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    color: #082f4a;
+    font-size: 16px;
+    height: 40px;
+    margin: 0;
+    padding: 25px 9px 10px 14px;
+    width: 180px;
+    position: relative;
+}
+
+.desired {
+    font-size: 20px;
+    height: 40px;
+    padding: 0 0 0 40px;
+}
+
+.form-row:nth-child(even) .desired {
+	background-color: #FCFAF2;
+}
+
+.form-row:nth-child(even) label {
+	
+}
+
+form {
+	background-color: #0e79c4;
+	color: #fff;
+	font-size: 16px;
+	padding: 20px 40px 25px;
+	display: inline-block;
+	vertical-align: top;
+}
+.form-row {
+	margin: 0 10px 15px 0;
+	float: left;
+}
+
+.form-field {
+	position: relative;
+    margin-right: 5px;
+    float: left;
+    overflow: hidden;
+}
+
+.config {
+	border-bottom: 1px dashed #6bb3e6;
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+
+.config input {
+	width: ;
+}
+
+.desired-res {
+	border-bottom: 1px dashed #6bb3e6;
+	padding-bottom: 20px;
+	overflow: hidden;
+}
+
+.submit {
+	overflow: hidden;
+	padding-top: 20px;
+}
+
+.plus {
+	font-size: 30px;
+	padding: 0 20px;
+	display: inline-block;
+	float: left;
+}
+
+button:hover {
+	border: 2px solid #444;
+	padding: 0 18px;
+	line-height: 46px;
+}
+
+.plus:disabled {
+	opacity: 0.5;
+	border: 0;
+	padding: 0 20px;
+	cursor: default;
+}
+
+.form-row {
+	overflow: hidden;
+}
+.button-row { 
+	clear:both;  
+	margin-top: 20px;
+	overflow: hidden;
+}
+
+.form-field .results {
+	text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 50px;
+}
+
+.form-field .results strong {
+	margin-left: 10px;
+}
+
+.button-label {
+	margin-left: 10px;
+	display: block; 
+	float: left;
+	line-height: 50px;
+}
+
+.registry-data {
+	padding: 25px;
+	width: 555px;
+	color: #fff;
+}
+
+code {
+	font-family: monospace, monospace;
+    word-wrap: break-word;
+    margin-top: 10px;
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+    color: #333;
+}
+
+.inline-code {
+	font-family: monospace, monospace;
+}
